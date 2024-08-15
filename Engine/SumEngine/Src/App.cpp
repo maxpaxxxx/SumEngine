@@ -63,7 +63,7 @@ void App::Run(const AppConfig& config)
 		GraphicsSystem* gs = GraphicsSystem::Get();
 		gs->BeginRender();
 		// This is where we send information from cpu to gpu
-			mCurrentState->Render();
+		mCurrentState->Render();
 
 		gs->EndRender();
 	}
