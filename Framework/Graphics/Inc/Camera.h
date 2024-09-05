@@ -27,7 +27,15 @@ namespace SumEngine::Graphics
 		void SetNearPlane(float nearPlane);
 		void SetFarPlane(float farPlane);
 
-		// =============================== TODO movement calls
+		// camera movement
+		// 3 defrees of freedom for translation
+		void Walk(float distance);
+		void Strafe(float distance);
+		void Rise(float distance);
+		
+		// 2 degrees of freedom for rotation
+		void Yaw(float radians);
+		void Pitch(float radians);
 
 		// return values
 		const Math::Vector3& GetPosition() const;

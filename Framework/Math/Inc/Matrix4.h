@@ -21,8 +21,10 @@ namespace SumEngine::Math
 				1.0f, 0.0f, 0.0f, 0.0f,
 				0.0f, 1.0f, 0.0f, 0.0f,
 				0.0f, 0.0f, 1.0f, 0.0f,
-				0.0f, 0.0f, 0.0f, 1.0f)
+				0.0f, 0.0f, 0.0f, 1.0f
+			)
 		{
+
 		}
 
 		constexpr Matrix4(
@@ -58,7 +60,8 @@ namespace SumEngine::Math
 				1.0f, 0.0f, 0.0f, 0.0f,
 				0.0f, 1.0f, 0.0f, 0.0f,
 				0.0f, 0.0f, 1.0f, 0.0f,
-				v.x, v.y, v.z, 1.0f);
+				v.x, v.y, v.z, 1.0f
+			);
 		}
 
 		static Matrix4 RotationAxis(const Vector3& axis, float rad);
@@ -80,7 +83,8 @@ namespace SumEngine::Math
 				cosf(rad), 0.0f, -sinf(rad), 0.0f,
 				0.0f, 1.0f, 0.0f, 0.0f,
 				sinf(rad), 0.0f, cosf(rad), 0.0f,
-				0.0f, 0.0f, 0.0f, 1.0f);
+				0.0f, 0.0f, 0.0f, 1.0f
+			);
 		}
 
 		static Matrix4 RotationZ(float rad)
@@ -90,7 +94,8 @@ namespace SumEngine::Math
 				cosf(rad), sinf(rad), 0.0f, 0.0f,
 				-sinf(rad), cosf(rad), 0.0f, 0.0f,
 				0.0f, 0.0f, 1.0f, 0.0f,
-				0.0f, 0.0f, 0.0f, 1.0f);
+				0.0f, 0.0f, 0.0f, 1.0f
+			);
 		}
 
 		static Matrix4 MatrixRotationQuaternion(const Math::Quaternion& q)

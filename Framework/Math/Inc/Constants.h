@@ -7,5 +7,4 @@ namespace SumEngine::Math::Constants
     constexpr const float TwoPi = Pi * 2.0f;
     constexpr const float DegToRad = Pi / 180.0f;
     constexpr const float RadToDeg = 180.0f / Pi;
-
 }

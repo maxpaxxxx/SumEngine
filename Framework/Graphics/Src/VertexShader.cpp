@@ -68,7 +68,7 @@ void VertexShader::Initialize(const std::filesystem::path& filePath, uint32_t fo
     {
         LOG("%s", static_cast<const char*>(errorBlob->GetBufferPointer()));
     }
-    ASSERT(SUCCEEDED(hr), "Fialed to compile vertex shader");
+    ASSERT(SUCCEEDED(hr), "Failed to compile vertex shader");
 
     hr = device->CreateVertexShader(
         shaderBlob->GetBufferPointer(),
