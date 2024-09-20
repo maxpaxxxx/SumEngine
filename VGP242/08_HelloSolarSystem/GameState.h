@@ -1,19 +1,19 @@
 #pragma once
-
+using namespace std;
 #include <SumEngine/Inc/SumEngine.h>
 
 enum class SolarSystem
 {
-	Sun,		
+	Sun,
 	Mercury,
-	Venus,	
+	Venus,
 	Earth,
-	Mars,	
+	Mars,
 	Jupiter,
-	Saturn,	
-	Uranus,	
-	Neptune,	
-	Pluto,		
+	Saturn,
+	Uranus,
+	Neptune,
+	Pluto,
 	Galaxy,
 	End
 };
@@ -21,17 +21,19 @@ enum class SolarSystem
 struct TexturedObject
 {
 	SumEngine::Math::Matrix4 transform;
+
 	SumEngine::Graphics::MeshBuffer mMeshBuffer;
 	SumEngine::Graphics::Texture mDiffuseTexture;
 
 	float orbitSpeed;
 	float rotationSpeed;
 	float distanceFromSun;
+	float renderTargetDistance;
 
 	void UpdatePosition(){}
-
 	void Render(){}
 };
+
 class GameState : public SumEngine::AppState
 {
 public:
@@ -41,6 +43,7 @@ public:
 	void DebugUI() override;
 
 	void Update(float deltaTime);
+
 protected:
 	void UpdateCamera(float deltaTime);
 
@@ -56,4 +59,5 @@ protected:
 	SumEngine::Graphics::RenderTarget mRenderTarget;
 
 	SolarSystem mCurrentTarget = SolarSystem::Sun;
+
 };

@@ -524,16 +524,14 @@ void SumEngine::Graphics::SimpleDraw::AddCone(int slices, float radius, const Ma
 			0.0f,
 			cos(rot1) * radius
 		};
-
 		//AddLine(v0 + circlePos, v1 + circlePos, color);
 		AddFace(v1 + circlePos, coneTip, v0 + circlePos, color);
-
 	}
 }
 
 void SimpleDraw::AddGroundPlane(float size, const Color& color)
 {
-	const float hs = size * 0.5f;
+	const float hs = size * 0.5f;	// half size
 	for (int i = 0; i <= size; ++i)
 	{
 		AddLine({ i - hs, 0.0f, -hs }, { i - hs, 0.0f, hs }, color);
@@ -550,7 +548,7 @@ void SimpleDraw::AddTransform(const Math::Matrix4& m)
 
 	AddLine(pos, pos + side, Colors::Red);
 	AddLine(pos, pos + up, Colors::Green);
-	AddLine(pos, pos + look, Colors::Blue);	
+	AddLine(pos, pos + look, Colors::Blue);		// z
 }
 
 void SimpleDraw::Render(const Camera& camera)

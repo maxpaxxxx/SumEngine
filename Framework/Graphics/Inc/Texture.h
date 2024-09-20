@@ -33,7 +33,9 @@ namespace SumEngine::Graphics
 
 		void* GetRawData() const;
 
-	private:
+	protected:
+		DXGI_FORMAT GetDXGIFormat(Format format);
+
 		ID3D11ShaderResourceView* mShaderResourceView = nullptr;
 	};
 }
